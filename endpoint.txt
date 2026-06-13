@@ -1,0 +1,164 @@
+POST  http://localhost:5000/api/auth/register
+Request {
+  "fullName": "Alice",
+  "email": "alice@yahoo.com",
+  "mobileNumber": "123456789",
+  "password": "1234"
+}
+Response {
+  "_id": "6a2aa3d61287da2a58cdf61a",
+  "fullName": "Alice",
+  "email": "alice@yahoo.com",
+  "referralCode": "72A99042",
+  "token": "eyJhbGciOiJIUzI1NiIsImlhdC"
+}
+
+{
+  "_id": "6a2aa51d1287da2a58cdf61b",
+  "fullName": "Bob",
+  "email": "bob@yahoo.com",
+  "referralCode": "75803200",
+  "token": "eyJhbGciOiJIUzI1NiIsMyWRYk"
+}
+
+{
+  "_id": "6a2aa58f1287da2a58cdf61c",
+  "fullName": "Carol",
+  "email": "carol@yahoo.com",
+  "referralCode": "CAFC17D5",
+  "token": "eyJhbGciOiJIUzI1NiIsIIctaaU"
+}
+
+Request {
+  "fullName": "Charles",
+  "email": "charles@yahoo.com",
+  "password": "1234",
+  "mobileNumber": "123456788",
+  "referredByCode": "75803200" //BOB's referral CODE
+}
+
+
+POST  http://localhost:5000/api/investments
+Request {
+  "investmentAmount": 10000,
+  "planDurationDays": 30,
+  "dailyROIPercentage": 1,
+  "planDetails": "Premium 30-Day Plan"
+}
+Response {
+  "user": "6a286821b7e4f4c7620c4b9a",
+  "investmentAmount": 10000,
+  "planDetails": "Premium 30-Day Plan",
+  "startDate": "2026-06-09T19:35:32.146Z",
+  "endDate": "2026-07-09T19:35:32.146Z",
+  "dailyROIPercentage": 1,
+  "investmentStatus": "ACTIVE",
+  "_id": "6a286b040fd503f148732230",
+  "createdAt": "2026-06-09T19:35:32.163Z",
+  "updatedAt": "2026-06-09T19:35:32.163Z",
+  "__v": 0
+}
+
+
+POST http://localhost:5000/api/investments/trigger-roi
+Request Bearer - jwt token
+Response {
+  "message": "Manual ROI calculation triggered successfully",
+  "data": {
+    "processedCount": 1,
+    "skippedCount": 0
+  }
+}
+
+GET http://localhost:5000/api/dashboard
+Request - carol's jwt token
+Response {
+  "totalInvestments": 10000,
+  "totalROIEarned": 100,
+  "totalLevelIncomeEarned": 0,
+  "walletBalance": 100
+}
+Request - Alice's jwt token
+Response {
+  "totalInvestments": 0,
+  "totalROIEarned": 0,
+  "totalLevelIncomeEarned": 5,
+  "walletBalance": 5
+}
+
+
+GET http://localhost:5000/api/referrals/direct
+Request - Alice's jwt token
+Response {
+  "count": 1,
+  "data": [
+    {
+      "_id": "6a2aa51d1287da2a58cdf61b",
+      "fullName": "Bob",
+      "email": "bob@yahoo.com",
+      "referralCode": "75803200",
+      "walletBalance": 10,
+      "createdAt": "2026-06-11T12:07:57.374Z"
+    }
+  ]
+}
+
+GET http://localhost:5000/api/referrals/tree
+Request - Alice's jwt token
+Response {
+  "tree": [
+    {
+      "_id": "6a2aa51d1287da2a58cdf61b",
+      "fullName": "Bob",
+      "email": "bob@yahoo.com",
+      "level": 1,
+      "downline": [
+        {
+          "_id": "6a2aa58f1287da2a58cdf61c",
+          "fullName": "Carol",
+          "email": "carol@yahoo.com",
+          "level": 2,
+          "downline": [
+            {
+              "_id": "6a2c6edbae3eafbbcd8aaac5",
+              "fullName": "Max",
+              "email": "max@yahoo.com",
+              "level": 3,
+              "downline": []
+            }
+          ]
+        },
+        {
+          "_id": "6a2c6f0fae3eafbbcd8aaac6",
+          "fullName": "Charles",
+          "email": "charles@yahoo.com",
+          "level": 2,
+          "downline": [
+            {
+              "_id": "6a2c6f46ae3eafbbcd8aaac7",
+              "fullName": "Caroline",
+              "email": "caroline@yahoo.com",
+              "level": 3,
+              "downline": [
+                {
+                  "_id": "6a2c6f77ae3eafbbcd8aaac8",
+                  "fullName": "Sophie",
+                  "email": "sophie@yahoo.com",
+                  "level": 4,
+                  "downline": []
+                }
+              ]
+            },
+            {
+              "_id": "6a2c6fa3ae3eafbbcd8aaac9",
+              "fullName": "Oleg",
+              "email": "oleg@yahoo.com",
+              "level": 3,
+              "downline": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

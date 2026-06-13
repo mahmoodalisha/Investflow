@@ -1,5 +1,5 @@
-## NexaChain: Decentralized Investment & Referral Platform
-NexaChain is a high-performance, full-stack financial application designed for automated investment management and multi-level marketing (MLM) commission distribution. The platform automates daily ROI calculations and ensures transparent, real-time commission tracking across an infinite-depth referral network.
+## Investflow: Decentralized Investment & Referral Platform
+Investflow is a high-performance, full-stack financial application designed for automated investment management and multi-level marketing (MLM) commission distribution. The platform automates daily ROI calculations and ensures transparent, real-time commission tracking across an infinite-depth referral network.
 
 <img width="1918" height="967" alt="Screenshot 2026-06-13 133317" src="https://github.com/user-attachments/assets/d7f4f883-8acf-4c2f-b6a1-3af145563ddc" />
 

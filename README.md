@@ -1,6 +1,31 @@
 ## NexaChain: Decentralized Investment & Referral Platform
 NexaChain is a high-performance, full-stack financial application designed for automated investment management and multi-level marketing (MLM) commission distribution. The platform automates daily ROI calculations and ensures transparent, real-time commission tracking across an infinite-depth referral network.
 
+<img width="1918" height="967" alt="Screenshot 2026-06-13 133317" src="https://github.com/user-attachments/assets/d7f4f883-8acf-4c2f-b6a1-3af145563ddc" />
+
+<img width="1918" height="965" alt="Screenshot 2026-06-13 135118" src="https://github.com/user-attachments/assets/511e4dbc-8ad8-44ed-9e58-63d75c67c926" />
+
+
+<img width="1918" height="962" alt="Screenshot 2026-06-13 134444" src="https://github.com/user-attachments/assets/05a5c692-b7f9-4e14-adef-a296f26ef545" />
+
+
+<img width="1918" height="960" alt="Screenshot 2026-06-13 135131" src="https://github.com/user-attachments/assets/92deb32a-962c-449d-9751-f99407ca3645" />
+
+
+<img width="1912" height="965" alt="Screenshot 2026-06-13 135223" src="https://github.com/user-attachments/assets/592d87ec-776d-48d7-bc7f-3184651606e5" />
+
+
+<img width="1918" height="963" alt="Screenshot 2026-06-13 141221" src="https://github.com/user-attachments/assets/fdaf8dc4-8d00-4090-bc1a-ad2a8d696a27" />
+
+
+<img width="1918" height="962" alt="Screenshot 2026-06-13 140646" src="https://github.com/user-attachments/assets/4987fe9c-2d0f-48e1-ac25-7fbd075a8d83" />
+
+<img width="1911" height="965" alt="Screenshot 2026-06-13 154254" src="https://github.com/user-attachments/assets/53b96661-d2c5-45ac-bd10-68698df769fe" />
+
+
+<img width="1912" height="957" alt="Screenshot 2026-06-13 154315" src="https://github.com/user-attachments/assets/10cc6713-0e92-4ad9-baa1-853a66e78942" />
+
+
 ## Key Features
 - Automated ROI Engine: A secure cron-job system that processes active investments and credits ROI daily.
 
